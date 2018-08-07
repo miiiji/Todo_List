@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TODO in HTML5 Skeleton</title>
+<!-- CSS, JS External 정의 -->
+<link rel="stylesheet" type="text/css" href="TP1_SKELETON_CSS.css">
+</head>
+<body>
+	<article>
+		<header>
+				<div id ="Todo">
+					<button id="todo_button" onclick="add_todo_button()"><strong>Add ToDo</strong></button>
+				</div>
+				<div id="right">
+					<div id="Day">
+						<select name ="day" id="day">
+							<option value ="all" selected>day</option>
+							<option value="mon">mon</option>
+							<option value="tue">tue</option>
+							<option value="wed">wed</option>
+							<option value="thu">thu</option>
+							<option value="fri">fri</option>
+						</select>
+					</div>
+					<div id ="Input">
+						<input type="text" id="Input_keyword" name ="Input" placeholder="Enter your keyword here" onkeypress="keypress_event()">
+					</div>
+				</div>
+		</header>
+		<section id = "Add_Section">
+			<div id ="writingTransparentBorder">
+			</div>
+				<div id ="Button_Click">
+						<img src="img/delete.png" alt="delete img" id="closing_image" onclick="close_todo_button()">
+							<div class="modal_header">
+								<select name="AddDay" id="AddMyDay">
+									<option value="mon">Monday</option>
+									<option value="tue">Tuesday</option>
+									<option value="wed">Wednesday</option>
+									<option value="thu">Thursday</option>
+									<option value="fri">Friday</option>
+								</select>
+							</div>
+							<div class="modal_body">
+								<input type="text" id="Input_day" name="Input_day" />
+							</div>
+							<div class="modal_footer" id="Input_contents">
+								<textarea id ="Input_content" name="Input_contents" rows="8" cols="48"></textarea>
+							</div>
+							<div class="done">
+								<button id="done_button" onclick="done_button()">Add</button>
+							</div>
+				</div>
+			</section>
+			<section id = "Add_Section_2">
+				<div id ="writingTransparentBorder_2">
+				</div>
+				<div id ="Motivate_Click">
+					<img src="img/delete.png" alt="delete img" id="closing_image_2" onclick="close_Motivate_button()">
+						<div class="Motivate_header">
+							<select name="Motivate_AddDay" id="Motivate_AddMyDay">
+								<option value="mon">Monday</option>
+								<option value="tue">Tuesday</option>
+								<option value="wed">Wednesday</option>
+								<option value="thu">Thursday</option>
+								<option value="fri">Friday</option>
+							</select>
+						</div>
+						<div class="Motivate_priority">
+							<input type="number" id="Motivate_priority" name="Motivate_priority" />
+						</div>
+						<div class="Motivate_text">
+							<input type="text" id="Motivate_text" name="Motivate_texts" />
+						</div>
+						<div class="Motivate_textarea">
+							<textarea id ="Motivate_content" name="Motivate_contents" rows="8" cols="48"></textarea>
+						</div>
+						<div class="Motivate_done">
+								<button id="motivate_button" onclick="motivate_done_button()" >Done</button>
+						</div>
+				</div>
+			</section>
+		<main id = "full">
+			<!-- Middle Bar A~D, Display Area A~D -->
+			<section id="middleBar_mon" class="middle">
+				<section class="middleTop"><strong>Monday</strong></section>
+				<section class="displayArea_mon"><div id=id_mon></div></section>
+			</section>
+			<!--경계선-->
+			<div class="mainLine"></div>
+
+			<section id="middleBar_tue" class="middle">
+				<section class="middleTop"><strong>Tuesday</strong></section>
+				<section class="displayArea_tue"><div id=id_tue></div></section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_wed" class="middle">
+				<section class="middleTop"><strong>Wednesday</strong></section>
+				<section class="displayArea_wed"><div id=id_wed></div></section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_thu" class="middle">
+				<section class="middleTop"><strong>Thursday</strong></section>
+				<section class="displayArea_thu"><div id=id_thu></div></section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_Fri" class="middle">
+				<section class="middleTop"><strong>Friday</strong></section>
+				<section class="displayArea_Fri"><div id=id_fri></div></section>
+			</section>
+		</main>
+	</article>
+<script src="./Todo_javascript.js"></script>
+</body>
+
+</html>
